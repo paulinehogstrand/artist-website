@@ -1,0 +1,88 @@
+
+/*margin top, right, bottom, left */
+p {
+  margin: 20px 0px 25px 0px;
+}
+
+
+/* text color black, opacity 60% */
+
+body {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  
+ 
+
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+
+
+/*remove bullets from menu list*/
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width; 25%;
+    background-color: #white;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  }
+ 
+
+
+ /* body font Helvetica */
+
+  body {
+    font-family: "Arial", Helvetica, sans-serif;
+  }
+
+/* Font size */
+
+  h1 {
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  h5 {
+    font-size: 30px;
+  }
+
+  h6 {
+    font-size: 30px;
+  }
+  
+  p {
+    font-size: 10px;
+  }
+
+  ul {
+    font-size: 10px;
+  }
+
+  
