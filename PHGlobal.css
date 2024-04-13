@@ -86,21 +86,21 @@ body {
   }
 
   /*responsive p text */
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 600px) {
     p {
       font-size: 12px;
     }
   }
 
   /* responsive nav menu */
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 600px) {
     ul {
       font-size: 12px;
     }
   }
 
   /* used for responsive images */
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 600px) {
     .responsive {
       width: 100%;
       height: auto;
