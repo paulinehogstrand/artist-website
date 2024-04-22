@@ -86,21 +86,21 @@ body {
   }
 
   /*responsive p text */
-   @media only screen and (max-width: 600px) {
-  body {
-    font-size: 12px;
+   @media only screen and (max-width: 767px) {
+    p {
+    font-size: 12px !important;
   }
 }
 
   /* responsive nav menu */
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 767px) {
     ul {
-      font-size: 12px;
+      font-size: 12px !important;
     }
   }
 
   /* used for responsive images */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 767px) {
     .responsive {
       width: 100%;
       height: auto;
@@ -108,7 +108,7 @@ body {
   }
 
 /* Column Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 767px) {
   .column {
     width: 100%;
   }
