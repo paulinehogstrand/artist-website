@@ -88,18 +88,27 @@ body {
   /* media queries small screens */
    @media screen and (max-width: 767px) and (max-device-width: 767px) {
    body {
-    font-size: 12px;
+    width: 100%;
+    height: auto;
     }
+     
+    @media screen and (max-width: 767px) and (max-device-width: 767px) {
      p {
     font-size: 12px;
     }
+      
+     @media screen and (max-width: 767px) and (max-device-width: 767px) {
      ul {
       font-size: 12px;
     }
+       
+     @media screen and (max-width: 767px) and (max-device-width: 767px) {
       .responsive {
       width: 100%;
       height: auto;
     }
+       
+    @media screen and (max-width: 767px) and (max-device-width: 767px) {
      .column {
     width: 100%;
   }
