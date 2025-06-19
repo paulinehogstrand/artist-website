@@ -1,0 +1,187 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", Helvetica, sans-serif;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  font-size: 0.65rem;
+}
+
+.content h2 {
+  font-size: 1.1rem;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  color: rgba(0, 0, 0, 0.85);
+  letter-spacing: 0.02em;
+  font-weight: 590; /* Add this line for medium weight, or use 400 for normal */
+}
+
+.content p,
+.text-container p {
+  margin-bottom: 1.2em; /* Increase this value for more space */
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 220px;
+  margin-top: 40px;      /* Add this line for top margin */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 40px 0;
+  box-sizing: border-box;
+}
+
+
+.content-spacer {
+  height: 24px;   /* or any height you want */
+  width: 100%;
+  display: block;
+}
+
+.main-center {
+  max-width: 600px; /* or any value less than half the viewport */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-vertical {
+  max-width: 700px;
+  margin-left: 100px;      /* Align left */
+  margin-right: auto;  /* Align left */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* or flex-start */
+}
+
+.about-vertical img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0px auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  gap: 32px; /* or whatever space you want between columns */
+}
+
+.column {
+  flex: 1;
+  min-width: 0; /* Prevents overflow */
+}
+
+.text-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR STYLE */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px 20px 20px 20px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar nav a {
+  display: block;
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  margin-bottom: 0.5px;   /* Even tighter space */
+  font-size: 0.65rem;
+  line-height: 1.0;     /* Slightly more readable than 0.7 */
+}
+
+.sidebar nav a:nth-of-type(1) {
+  margin-bottom: 16px;
+}
+
+.sidebar nav a:hover {
+  color: #333;
+}
+
+.sidebar nav a.active {
+  font-weight: bold;
+}
+
+.sidebar nav a.light {
+  color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+/* Sidebar spacer */
+.spacer {
+  height: 250px; /* Adjust as needed */
+} 
+
+.box {
+  background-color: #eaeaea;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.project-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.project-img {
+  max-width: 350px !important;
+  width: 100% !important;
+  height: auto !important;
+  flex-shrink: 0;
+  display: block;
+}
+
+.project-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 220px;
+  width: calc(100% - 220px);
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+}

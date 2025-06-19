@@ -4,83 +4,46 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Concerts</title>
+    <title>Performances</title>
+     <meta name="description" content="">
 
-   <link rel="stylesheet" href="PHGlobal.css">
+   <link rel="stylesheet" href="style.css">
 
    <style>
+    body,
+    .sidebar,
+    .content {
+      background-color: #3d3df3;
+    }
 
-  body {background-color: rgb(3, 1, 252);}
-    p {color: rgb(241, 254, 198);}
-
-
-    /* unvisited link */
-  a:link {
-     color: rgb(255, 0, 0, 0.99);
-   }
-   
-   /* visited link */
-   a:visited {
-     color: rgb(255, 0, 0, 0.99);
-   }
-   
-   /* mouse over link */
-   a:hover {
-     color: rgb(255, 0, 0, 0.99);
-   }
-   
-   /* selected link */
-   a:active {
-     color: rgb(255, 0, 0, 0.99);
-   }
-
-   .nav a {
-  color: rgba(0, 0, 0, 0.7);
-  }
-
-  .nav a.light {
-  color: rgba(0, 0, 0, 0.5) !important;
-  }
- 
- </style>
+    .content {
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+    }
+    .content a {
+      color: rgb(244, 90, 59) !important;
+    }
+    .content p {
+      color: rgb(241, 254, 198);
+    }
+  </style>
    
 </head>
 
 <body>
-   
-  <div class="nav">
-    <ul>
-      <li><b><a href="index.html">Pauline Hogstrand</a></b></li>
-      <br>
-      <li><a href="about.html">About</a></li>
-      <li><a href="releases.html">Releases</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="residenciescommission.html">Residencies<br>Commission</a></li>
-      <li><a href="live.html">Concerts</a></li>
-      <li><a href="press.html">Press</a></li>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <li><a class="light" href="contact.html">email</a></li>
-      <li><a class="light" href="https://www.youtube.com/channel/UCM4tRDQkHMLcbN9NhqDUqGw" target="blank">youtube</a></li>
-      <li><a class="light" href="https://www.instagram.com/paulinehogstrand" target="blank">instagram</a></li>
-      <li><a class="light" href="https://www.facebook.com/paulinehogstrand" target="blank">facebook</a></li>
-    </ul>
-  </div>
-
-    <div style="margin-left:15%;padding:1px 16px;height:1000px;">  
-    <div style="margin-right:15%;padding:1px 16px;height:1000px;"> 
-    <br>
+   <div id="sidebar"></div>
+  <div class="content">
+    <div class="text-container">
      <p><b>2025</b></p>
         <p><b>NOVEMBER 12</b> Pauline Hogstrand, XenophoniX AvantJazz Festival, Metronomen, Frederiksberg (DK)</p>
+        <p><b>NOVEMBER 4-7</b> E/I, Sacrum Profanum, Krakow (PL)</p>
+        <p><b>OCTOVER 31</b> Damkapellet, Huset i Hasserisgade, Aalborg (DK)</p>
+        <p><b>OCTOBER 5</b> Crush String Collective, Pakhuset, Odsherred (DK)</p>
+        <p><b>OCTOBER 3</b> Blue Lake <i>The Animal</i> release concert, World of Echo, London (UK)</p>
         <p><b>SEPTEMBER 21</b> Damkapellet performs <i>Ø</i> by Ying-Hsueh Chen, Venue TBA, Golden Days Festival, Copenhagen (DK)
         <p><b>AUGUST 17</b> Necromancy: Echoes of the Underworld by Marcela Lucatelli, Den Røde Plads, Copenhagen Opera Festival, Copenhagen (DK)</p>
         <p><b>JULY 12</b> Blue Lake, Venue TBA, Valby (DK)</p>
-        <p><b>JULY 7</b> Rasmus Holm Quartet x Crush String Collective, Venue TBA, Copenhagen Jazz Festival (DK)</p>
+        <p><b>JULY 7</b> Rasmus Holm Quartet x Crush String Collective, Krydsklange - Østre anlæg, Copenhagen Jazz Festival (DK)</p>
         <p><b>MAY 24</b> <a href="https://ekko.ticketco.events/no/nb/e/hyperlocal_north" target="blank">Up Node Network presents: Pauline Hogstrand, Ingri Høyland, Puyain Sanati</a>, EKKO, Bergen (NO)</p>
         <p><b>MAY 23</b> <a href="https://huset.dk/event/meuf-pauline-hogstrand-ft-nicole-hogstrand-4679" target="blank">Pauline Hogstrand ft. Nicole Hogstrand: <i>Behold the plant: it is the butterfly fettered by the earth</i></a> world premiere, Huset i Aalborg, Aalborg (DK)</p>
         <p><b>MAY 2-3</b> <a href="https://spotfestival.dk/program/damkapellet/" target="blank">Damkapellet</a>, Rytmisk Sal, SPOT Festival, Aarhus (DK)</p>
@@ -330,9 +293,27 @@
     <p><b>NOVEMBER 11</b> <i>Den Uendelige Labyrint</i>, Musikkens Hus, Aalborg (DK)</p>
     <p><b>NOVEMBER 29</b> Julie Kjær debutkoncert, Musikhuset, Aarhus (DK)</p>
     <p><b>DECEMBER 8</b> Damkapellet + Usmifka, Fabrikken, Christiania, København (DK)</p>
-    <br>
+       
+
+  </div>
+   </div>
     
-    
+    <script>
+fetch('sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('sidebar').innerHTML = data;
+
+    // Highlight the active link
+    const path = window.location.pathname.split('/').pop();
+    const links = document.querySelectorAll('#sidebar nav a');
+    links.forEach(link => {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
 
 </body>
 
