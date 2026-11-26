@@ -421,21 +421,8 @@ body {
 }
 
 body.live-page {
-  /* Change these four colour codes to customise the live-page gradient. */
-  --live-blue-1: hsl(235, 100%, 50%);
-  --live-blue-2: hsl(239, 100%, 39%);
-  --live-blue-green-1: #005010;
-  --live-blue-green-2: #150d5a;
-
-  background: linear-gradient(
-    270deg,
-    var(--live-blue-1),
-    var(--live-blue-2),
-    var(--live-blue-green-1),
-    var(--live-blue-green-2)
-  ) !important;
-  background-size: 800% 800% !important;
-  animation: gradientShift 90s ease infinite;
+  background: #3d3df3 !important;
+  animation: none;
 }
 
 body.live-page .sidebar,
