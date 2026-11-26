@@ -219,14 +219,142 @@ img.responsive {
 /* media queries for mobile */
 
 @media (max-width: 600px) {
-  .sidebar {
+  html,
+  body {
     width: 100%;
-    position: static;
+    min-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
+
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding: 14px 16px;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 14px;
+  }
+
+  .sidebar nav a,
+  .sidebar nav a:nth-of-type(1) {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .sidebar nav a:nth-of-type(1) {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  .sidebar .spacer {
+    display: none;
+  }
+
+  .sidebar nav a.light {
+    margin-top: 2px;
+  }
+
+  .container {
+    display: block;
+  }
+
   .content {
-    padding: 10px;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 24px 16px 48px;
+    justify-content: flex-start;
+    align-items: stretch;
   }
-  .about-vertical, .text-container {
-    padding: 0;
+
+  .main-center,
+  .about-vertical,
+  .text-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .about-vertical {
+    align-items: stretch;
+  }
+
+  .row {
+    display: block !important;
+    flex-direction: column !important;
+  }
+
+  .column,
+  .column.left,
+  .column.right,
+  .left,
+  .right {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+  }
+
+  .content p,
+  .text-container p,
+  .project-text p,
+  .row p,
+  .column p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .row,
+  .column,
+  .left,
+  .right {
+    float: none;
+  }
+
+  .project-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .project-img {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  img.responsive,
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content h2 {
+    font-size: 1.35rem;
+  }
+
+  .footer {
+    position: static;
+    left: auto;
+    width: 100%;
   }
 }
