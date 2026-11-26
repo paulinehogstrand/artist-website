@@ -394,3 +394,38 @@ img.responsive {
     height: auto !important;
   }
 }
+
+/* Solen-style animated gradient background */
+body {
+  background: linear-gradient(270deg, #e0e0ff, #fcffe0, #e0ffe0, #fff0ff) !important;
+  background-size: 800% 800% !important;
+  animation: gradientShift 90s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Transparent backgrounds for content areas */
+.sidebar,
+.content {
+  background: transparent !important;
+}
+
+body.live-page {
+  background: #3d3df3 !important;
+  animation: none;
+}
+
+body.live-page .sidebar,
+body.live-page .content {
+  background-color: #3d3df3 !important;
+}
