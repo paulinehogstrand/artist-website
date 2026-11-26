@@ -230,8 +230,16 @@ img.responsive {
   }
 
   body {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .content p,
+  .text-container p,
+  .project-text p,
+  .row p,
+  .column p {
+    font-size: 0.85rem;
   }
 
   .sidebar {
@@ -270,6 +278,13 @@ img.responsive {
 
   .sidebar nav a.light {
     margin-top: 2px;
+    font-size: 0.72rem;
+  }
+
+  .sidebar nav a[href="contact.html"] {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 6px;
   }
 
   .container {
