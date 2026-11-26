@@ -54,6 +54,7 @@ body {
   max-width: 600px; /* or any value less than half the viewport */
   width: 100%;
   margin: 0 auto;
+  text-align: center; /* Center the index content */
 }
 
 .about-vertical {
@@ -230,7 +231,7 @@ img.responsive {
   }
 
   body {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     line-height: 1.45;
   }
 
@@ -239,7 +240,7 @@ img.responsive {
   .project-text p,
   .row p,
   .column p {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
   }
 
   .sidebar {
@@ -281,10 +282,24 @@ img.responsive {
     font-size: 0.72rem;
   }
 
-  .sidebar nav a[href="contact.html"] {
+  .contact-links {
     flex-basis: 100%;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
     margin-top: 6px;
+  }
+
+  .contact-links a {
+    width: auto;
+    margin: 0;
+  }
+
+  .sidebar nav a[href="contact.html"] {
+    flex-basis: auto;
+    width: auto;
+    margin-top: 2px;
   }
 
   .container {
@@ -371,5 +386,11 @@ img.responsive {
     position: static;
     left: auto;
     width: 100%;
+  }
+
+  .index-gif {
+    width: 280px;
+    max-width: 100%;
+    height: auto !important;
   }
 }
